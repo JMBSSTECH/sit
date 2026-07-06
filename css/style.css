@@ -6,14 +6,8 @@
   --rg-border: rgba(196,133,106,0.22); --ease: cubic-bezier(0.4,0,0.2,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;cursor:none}
+html{scroll-behavior:smooth}
 body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--frost);overflow-x:hidden}
-
-#cd,#cr{position:fixed;top:0;left:0;pointer-events:none;transform:translate(-50%,-50%);z-index:9999}
-#cd{width:7px;height:7px;border-radius:50%;background:var(--rg);transition:width .25s,height .25s}
-#cr{width:30px;height:30px;border-radius:50%;border:1px solid rgba(196,133,106,.55);z-index:9998;transition:width .4s,height .4s}
-.hov #cd{width:12px;height:12px}
-.hov #cr{width:42px;height:42px;border-color:var(--rg)}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -73,7 +67,7 @@ nav.sc{background:rgba(12,12,12,.93);backdrop-filter:blur(22px);padding:1rem 6%;
 .sec-head{text-align:center;margin-bottom:5.5rem}
 .sec-head .sh{font-size:clamp(2.5rem,5vw,4rem)}
 .mtable{display:flex;flex-direction:column;gap:0;max-width:980px;margin:0 auto}
-.mitem{display:grid;grid-template-columns:1fr auto;align-items:start;padding:2.2rem 0;border-bottom:1px solid rgba(255,255,255,.06);gap:2rem;cursor:none;transition:padding-left .4s var(--ease);position:relative}
+.mitem{display:grid;grid-template-columns:1fr auto;align-items:start;padding:2.2rem 0;border-bottom:1px solid rgba(255,255,255,.06);gap:2rem;cursor:pointer;transition:padding-left .4s var(--ease);position:relative}
 .mitem::before{content:'';position:absolute;left:0;bottom:-1px;width:0;height:1px;background:var(--rg);transition:width .5s var(--ease)}
 .mitem:hover{padding-left:1rem}
 .mitem:hover::before{width:100%}
@@ -82,7 +76,7 @@ nav.sc{background:rgba(12,12,12,.93);backdrop-filter:blur(22px);padding:1rem 6%;
 .mdesc{font-size:.87rem;color:var(--silver);font-weight:300;line-height:1.75;margin-bottom:.7rem;max-width:540px}
 .mpc{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;min-width:95px}
 .mprice{font-family:'Bodoni Moda',serif;font-size:1.4rem;font-weight:700;color:var(--rg);line-height:1;white-space:nowrap; letter-spacing: 0.05em;}
-.mlink{font-size:.59rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);text-decoration:none;white-space:nowrap;transition:color .3s;cursor:none}
+.mlink{font-size:.59rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);text-decoration:none;white-space:nowrap;transition:color .3s;cursor:pointer}
 .mitem:hover .mlink{color:var(--rg)}
 .mitem.star{background:var(--panel);padding:2.2rem 2rem;border:1px solid var(--rg-border);margin-bottom:.8rem;border-bottom:1px solid var(--rg-border)}
 .mitem.star:hover{padding-left:2.6rem}
@@ -154,7 +148,7 @@ footer{background:#080808;padding:5rem 6% 2rem;border-top:1px solid var(--rg-bor
   background: none; border: none; outline: none; box-shadow: none;
   color: var(--ash); font-family: 'Outfit', sans-serif;
   font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-  font-weight: 500; cursor: none; transition: color 0.3s var(--ease);
+  font-weight: 500; cursor: pointer; transition: color 0.3s var(--ease);
   padding: 0.5rem 1rem; margin: 0; display: inline-block;
 }
 .mclose:hover { color: var(--rg-lt); }
@@ -191,8 +185,6 @@ footer{background:#080808;padding:5rem 6% 2rem;border-top:1px solid var(--rg-bor
   .nlinks a:not(.ncta){display:none}
   .nlinks{gap:0}
   .hero-h1{font-size:2.8rem}
-  html{cursor:auto}
-  #cd,#cr{display:none !important}
 }
 
 a:focus-visible,button:focus-visible,.mitem:focus-visible{
@@ -210,7 +202,7 @@ a:focus-visible,button:focus-visible,.mitem:focus-visible{
   padding:.9rem 1.3rem;border-radius:100px;
   box-shadow:0 8px 24px rgba(0,0,0,.45);
   font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
-  transition:transform .3s var(--ease),background .3s;cursor:none;
+  transition:transform .3s var(--ease),background .3s;cursor:pointer;
 }
 .wa-float:hover{background:var(--rg-lt);transform:translateY(-3px)}
 .wa-float svg{width:20px;height:20px;flex-shrink:0}
