@@ -32,7 +32,7 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
 
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('on')}),{threshold:.08});
 document.querySelectorAll('.rv').forEach(r=>obs.observe(r));
-script.js
+
 let lastFocusedElement = null;
 
 function openM(id){
