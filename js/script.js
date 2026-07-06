@@ -1,26 +1,3 @@
-const isTouch = matchMedia('(hover:none),(pointer:coarse)').matches;
-
-if(!isTouch){
-  const cd=document.getElementById('cd'),cr=document.getElementById('cr');
-  let mx=0,my=0,rx=0,ry=0,raf=null;
-  document.addEventListener('mousemove',e=>{
-    mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px';
-    if(!raf) raf=requestAnimationFrame(loop);
-  });
-  function loop(){
-    rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cr.style.left=rx+'px';cr.style.top=ry+'px';
-    raf=requestAnimationFrame(loop);
-  }
-  document.querySelectorAll('a,button,.mitem,.mclose,.btn-rg').forEach(el=>{
-    el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
-    el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
-  });
-} else {
-  document.documentElement.style.cursor='auto';
-  document.getElementById('cd')?.remove();
-  document.getElementById('cr')?.remove();
-}
-
 document.querySelectorAll('.mitem[onclick]').forEach(el=>{
   el.setAttribute('role','button');
   el.setAttribute('tabindex','0');
