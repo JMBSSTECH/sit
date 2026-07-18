@@ -31,7 +31,6 @@ nav.sc{background:rgba(12,12,12,.93);backdrop-filter:blur(22px);padding:1rem 6%;
 .nlink-highlight{color:var(--rg)!important}
 .nlink-highlight::after{background:var(--rg)}
 
-/* 🛠️ VERIFICADO: Propriedade limpa de resíduos e ativa */
 .ncta{background:var(--rg)!important;color:var(--black)!important;padding:.65rem 1.5rem;font-weight:600!important;letter-spacing:.16em!important}
 .ncta::after{display:none!important}
 .ncta:hover{background:var(--rg-lt)!important;transform:translateY(-2px)}
@@ -40,7 +39,6 @@ nav.sc{background:rgba(12,12,12,.93);backdrop-filter:blur(22px);padding:1rem 6%;
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:9rem 6% 6rem;position:relative;overflow:hidden}
 .hero-left{position:relative;z-index:1;padding-right:3rem}
 
-/* 🛠️ VERIFICADO: letter-spacing limpo de 'Tramo' e ativo */
 .hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:.62rem;letter-spacing:.44em;text-transform:uppercase;color:var(--rg);font-weight:500;margin-bottom:2rem;animation:fadeIn 1s .3s both}
 .hero-tag::before{content:'';width:28px;height:1px;background:var(--rg)}
 .hero-h1{font-family:'Bodoni Moda',serif;font-size:clamp(3rem,5.8vw,6rem);font-weight:900;line-height:.96;color:var(--white);letter-spacing:-.02em;margin-bottom:1.8rem;animation:fadeUp 1s .5s both}
@@ -96,6 +94,10 @@ nav.sc{background:rgba(12,12,12,.93);backdrop-filter:blur(22px);padding:1rem 6%;
   .courses-grid{grid-template-columns:1fr}
 }
 
+/* TÍTULOS DE SEÇÃO E MODAIS */
+.sh{font-family:'Bodoni Moda',serif;font-weight:600;color:var(--white);line-height:1.15}
+.sh em{font-style:italic;font-weight:400;color:var(--rg-lt)}
+
 /* SERVIÇOS */
 #servicos{padding:10rem 6%;border-top:1px solid rgba(255,255,255,.04)}
 .sec-head{text-align:center;margin-bottom:5.5rem}
@@ -121,7 +123,6 @@ nav.sc{background:rgba(12,12,12,.93);backdrop-filter:blur(22px);padding:1rem 6%;
 .bullet-list li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
 .bullet-list li::before { content: ''; width: 5px; height: 5px; background: var(--rg); border-radius: 50%; flex-shrink: 0; }
 
-/* 🛠️ VERIFICADO: Declaração limpa e explícita da classe .eyebrow */
 .eyebrow {
   display: inline-block; font-size: 0.62rem; letter-spacing: 0.38em;
   text-transform: uppercase; color: var(--rg); font-weight: 500; margin-bottom: 1rem;
@@ -174,8 +175,14 @@ footer{background:#080808;padding:5rem 6% 2rem;border-top:1px solid var(--rg-bor
   border-bottom: 1px solid var(--rg-border); display: flex;
   align-items: center; justify-content: space-between;
 }
+.mtop-n{font-family:'Bodoni Moda',serif;font-size:1rem;font-weight:600;font-style:italic;color:var(--white);letter-spacing:.05em}
 .mbody { padding: 3rem 2.5rem; }
 .mgrid { display: grid; grid-template-columns: 1.1fr 1.9fr; gap: 3.5rem; align-items: start; }
+.minfo{display:flex;flex-direction:column}
+.minfo p{font-size:.92rem;color:var(--ash);font-weight:300;line-height:1.85;margin-bottom:1rem}
+.minfo p:last-of-type{margin-bottom:0}
+.mpreco{margin-bottom:1.4rem}
+.mval{font-family:'Bodoni Moda',serif;font-size:1.8rem;font-weight:900;color:var(--rg);line-height:1;letter-spacing:.03em}
 
 .mclose {
   appearance: none; -webkit-appearance: none; -moz-appearance: none;
